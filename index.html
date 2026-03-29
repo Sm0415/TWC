@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Talent World Connect – Global Recruitment Agency | Sarajevo</title>
+  <meta name="description" content="Talent World Connect is a professional recruitment agency based in Sarajevo, Bosnia. We connect global talent with top employers worldwide."/>
+  <link rel="icon" type="image/png" href="/logo-removebg.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            brand: { blue: '#2563EB', orange: '#F97316', green: '#10B981', dark: '#0F172A' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-slate-600 bg-slate-50 antialiased selection:bg-brand-blue selection:text-white flex flex-col min-h-screen">
+
+  <div class="bg-brand-dark text-slate-300 text-sm py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <span>📍 Semira Fraste 5, 71000 Sarajevo, Bosnia and Herzegovina</span>
+      <span class="flex gap-6">
+        <a href="mailto:info@talentworldconnect.com" class="hover:text-white transition-colors">✉ info@talentworldconnect.com</a>
+        <a href="tel:+38761616422" class="hover:text-white transition-colors">📞 +387 61 61 64 22</a>
+      </span>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center relative">
+      <a href="index.html" class="flex items-center gap-3 group">
+<div class="text-3xl transition-transform group-hover:scale-110">
+  <img src="logo-removebg.png" alt="Logo" class="w-40 h-22 object-contain">
+</div>
+        <div class="font-heading font-bold leading-tight">
+          <span class="text-brand-blue text-lg">Globally</span><span class="text-brand-orange text-lg"> Connected</span><br/>
+          <span class="text-slate-800">To World</span>
+        </div>
+      </a>
+      
+      <nav id="mobileMenu" class="hidden lg:flex absolute lg:relative top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none flex-col lg:flex-row items-center gap-6 lg:gap-8 font-medium text-slate-600 p-6 lg:p-0 border-b lg:border-none border-slate-200">
+        <a href="index.html" class="text-brand-blue font-semibold">Home</a>
+        <a href="pages/about.html" class="hover:text-brand-blue transition-colors">About Us</a>
+        <a href="pages/services.html" class="hover:text-brand-blue transition-colors">Services</a>
+        <a href="pages/jobs.html" class="hover:text-brand-blue transition-colors">Job Board</a>
+        <a href="pages/global.html" class="hover:text-brand-blue transition-colors">Global Presence</a>
+        <a href="pages/contact.html" class="hover:text-brand-blue transition-colors">Contact</a>
+        <a href="admin/dashboard.html" id="adminNavLink" class="hidden px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg transition-colors border border-slate-200 w-full lg:w-auto text-center">Admin ↗</a>
+      </nav>
+
+      <button id="hamburgerBtn" class="lg:hidden text-2xl text-slate-800 focus:outline-none" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <section class="relative bg-gradient-to-b from-blue-50 to-white overflow-hidden py-16 lg:py-24 px-4">
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        
+        <div class="max-w-2xl text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-brand-blue font-semibold text-sm mb-6">
+            🌍 Welcome to Talent World Connect.
+          </div>
+          <h1 class="font-heading text-4xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6">
+            Connecting<br/>
+            <span class="text-brand-orange">World-Class</span><br/>
+            <span class="text-brand-green">Talent</span> to<br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-indigo-600">Opportunities</span>
+          </h1>
+          <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+            Talent World Connect bridges skilled professionals across the globe with leading employers. Ethical, reliable, and results-driven recruitment.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-12">
+            <a href="pages/jobs.html" class="px-8 py-4 bg-brand-blue hover:bg-blue-700 text-white font-semibold rounded-xl text-center shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-1">Browse Jobs →</a>
+            <a href="pages/contact.html" class="px-8 py-4 bg-white hover:bg-slate-50 text-brand-blue font-semibold rounded-xl border-2 border-brand-blue text-center transition-all hover:-translate-y-1">Request a Callback</a>
+          </div>
+          
+          <div class="flex flex-wrap justify-center lg:justify-start items-center gap-6 lg:gap-10 border-t border-slate-200 pt-6">
+            <div><span class="block font-heading text-2xl font-bold text-slate-900">500+</span><span class="text-xs font-medium text-slate-500 uppercase tracking-wider">Placements</span></div>
+            <div class="w-px h-8 bg-slate-200 hidden sm:block"></div>
+            <div><span class="block font-heading text-2xl font-bold text-slate-900">20+</span><span class="text-xs font-medium text-slate-500 uppercase tracking-wider">Countries</span></div>
+            <div class="w-px h-8 bg-slate-200 hidden sm:block"></div>
+            <div><span class="block font-heading text-2xl font-bold text-slate-900">5+</span><span class="text-xs font-medium text-slate-500 uppercase tracking-wider">Years Exp.</span></div>
+          </div>
+        </div>
+
+        <div class="relative hidden lg:block">
+          <div class="absolute -inset-4 bg-gradient-to-tr from-brand-blue/30 to-brand-green/30 blur-2xl rounded-full z-0"></div>
+          
+          <img 
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" 
+            alt="Global Team Collaborating" 
+            class="relative z-10 w-full h-[550px] object-cover rounded-[2rem] shadow-2xl border-4 border-white"
+          />
+          
+          <div class="absolute bottom-10 -left-10 z-20 bg-white p-4 rounded-xl shadow-xl flex items-center gap-4 animate-bounce hover:pause">
+            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-xl">✅</div>
+            <div>
+              <p class="text-sm text-slate-500 font-medium">Verified Talent</p>
+              <p class="font-bold text-slate-900">Ready to Hire</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-slate-100 py-8 px-4 border-y border-slate-200">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="block text-xs uppercase tracking-widest font-semibold mb-2 text-slate-500">
+        Advertisement
+      </span>
+      <img src="logo.jpeg" alt="Advertisement" class="mx-auto w-full max-w-[728px] h-auto rounded-lg shadow-md">
+    </div>
+  </div>
+
+  <section class="py-16 md:py-24 px-4 max-w-7xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <p class="text-brand-blue font-bold tracking-widest uppercase text-sm mb-3">What We Do</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">Industries We Serve</h2>
+      <p class="text-lg text-slate-600">Supplying highly skilled, skilled, and semi-skilled professionals across multiple global sectors.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
+        <div class="w-16 h-16 rounded-xl bg-blue-50 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">🏗️</div>
+        <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">Construction</h3>
+        <p class="text-slate-600">Civil engineers, project managers, and skilled tradespeople for major infrastructure projects.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
+        <div class="w-16 h-16 rounded-xl bg-green-50 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">🏥</div>
+        <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">Healthcare</h3>
+        <p class="text-slate-600">Nurses, doctors, and allied health professionals for hospitals and care facilities globally.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
+        <div class="w-16 h-16 rounded-xl bg-orange-50 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">🏨</div>
+        <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">Hospitality</h3>
+        <p class="text-slate-600">Hotel management, culinary experts, and service staff for leading hospitality brands.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
+        <div class="w-16 h-16 rounded-xl bg-indigo-50 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">💼</div>
+        <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">Corporate & Finance</h3>
+        <p class="text-slate-600">Accountants, analysts, HR professionals, and premium executive placements.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
+        <div class="w-16 h-16 rounded-xl bg-teal-50 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">⚙️</div>
+        <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">Engineering & Tech</h3>
+        <p class="text-slate-600">Mechanical, electrical, IT, and software talent for complex global technology projects.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
+        <div class="w-16 h-16 rounded-xl bg-rose-50 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">🛒</div>
+        <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">Retail & Services</h3>
+        <p class="text-slate-600">Store managers, customer service representatives, and reliable operations staff at scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-28 px-4 bg-slate-100 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 gap-6 text-center md:text-left">
+        <div class="max-w-xl">
+          <p class="text-brand-orange font-bold tracking-widest uppercase text-sm mb-3">Elite Talent Pool</p>
+          <h2 class="font-heading text-3xl md:text-5xl font-black text-slate-900 mb-5 leading-tight uppercase tracking-tighter">Featured Global Professionals</h2>
+          <p class="text-lg text-slate-600 font-medium">Pre-vetted, trade-tested, and ready for deployment. This is a representative sample of our immediate manpower capacity.</p>
+        </div>
+        <a href="pages/contact.html" class="px-8 py-4 bg-brand-blue hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-500/30 transition-all whitespace-nowrap text-sm uppercase tracking-widest">Request Full Database →</a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="bg-white rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden flex flex-col group border border-slate-100">
+          <div class="h-24 bg-brand-blue/10 border-b border-brand-blue/20 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 text-6xl opacity-10 font-black">🏗️</div>
+          </div>
+          
+          <div class="relative w-28 h-28 mx-auto -mt-14 z-10 shrink-0">
+            <img src="https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?q=80&w=400&auto=format&fit=crop" alt="Male Candidate" class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl grayscale group-hover:grayscale-0 transition-all duration-300">
+            <span class="absolute bottom-1 right-1 bg-green-500 text-white text-sm w-7 h-7 rounded-full flex items-center justify-center shadow-lg border-2 border-white" title="Verified Professional">✓</span>
+          </div>
+
+          <div class="p-6 text-center flex-grow flex flex-col">
+            <p class="text-xs text-slate-400 font-bold tracking-widest uppercase mb-1">ID: #TWC-CE84</p>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-2 leading-tight">Senior Civil Engineer</h3>
+            <p class="text-brand-blue font-bold text-xs uppercase tracking-widest mb-4">Construction & Infrastructure</p>
+            <p class="text-sm text-slate-600 mb-5 font-medium leading-relaxed">8+ years experience in GCC mega-infrastructure and commercial high-rises.</p>
+            
+            <div class="flex flex-wrap gap-2 mb-6 justify-center">
+              <span class="text-[10px] font-semibold bg-slate-50 border border-slate-200 px-3 py-1 rounded-full text-slate-600">AutoCAD</span>
+              <span class="text-[10px] font-semibold bg-slate-50 border border-slate-200 px-3 py-1 rounded-full text-slate-600">Project Mgmt</span>
+            </div>
+            
+            <a href="pages/contact.html" class="mt-auto block w-full text-center py-3.5 bg-brand-blue hover:bg-blue-700 text-white font-bold rounded-xl transition-colors text-sm uppercase tracking-wider shadow-md">Request Interview</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden flex flex-col group border border-slate-100">
+          <div class="h-24 bg-brand-green/10 border-b border-brand-green/20 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 text-6xl opacity-10 font-black">🏥</div>
+          </div>
+          
+          <div class="relative w-28 h-28 mx-auto -mt-14 z-10 shrink-0">
+            <img src="https://images.unsplash.com/photo-1584820921497-dac5c69ac190?q=80&w=400&auto=format&fit=crop" alt="Female Candidate" class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl grayscale group-hover:grayscale-0 transition-all duration-300">
+            <span class="absolute bottom-1 right-1 bg-green-500 text-white text-sm w-7 h-7 rounded-full flex items-center justify-center shadow-lg border-2 border-white" title="Verified Professional">✓</span>
+          </div>
+
+          <div class="p-6 text-center flex-grow flex flex-col">
+            <p class="text-xs text-slate-400 font-bold tracking-widest uppercase mb-1">ID: #TWC-RN11</p>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-2 leading-tight">ICU Registered Nurse</h3>
+            <p class="text-brand-green font-bold text-xs uppercase tracking-widest mb-4">Healthcare Sector</p>
+            <p class="text-sm text-slate-600 mb-5 font-medium leading-relaxed">Licensed clinical nurse with 5 years experience in critical care and trauma.</p>
+            
+            <div class="flex flex-wrap gap-2 mb-6 justify-center">
+              <span class="text-[10px] font-semibold bg-slate-50 border border-slate-200 px-3 py-1 rounded-full text-slate-600">ACLS Certified</span>
+              <span class="text-[10px] font-semibold bg-slate-50 border border-slate-200 px-3 py-1 rounded-full text-slate-600">BSc Nursing</span>
+            </div>
+            
+            <a href="pages/contact.html" class="mt-auto block w-full text-center py-3.5 bg-brand-green hover:bg-emerald-600 text-white font-bold rounded-xl transition-colors text-sm uppercase tracking-wider shadow-md">Request Interview</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden flex flex-col group border border-slate-100">
+          <div class="h-24 bg-brand-orange/10 border-b border-brand-orange/20 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 text-6xl opacity-10 font-black">👨‍🍳</div>
+          </div>
+          
+          <div class="relative w-28 h-28 mx-auto -mt-14 z-10 shrink-0">
+            <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=400&auto=format&fit=crop" alt="Male Candidate" class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl grayscale group-hover:grayscale-0 transition-all duration-300">
+            <span class="absolute bottom-1 right-1 bg-green-500 text-white text-sm w-7 h-7 rounded-full flex items-center justify-center shadow-lg border-2 border-white" title="Verified Professional">✓</span>
+          </div>
+
+          <div class="p-6 text-center flex-grow flex flex-col">
+            <p class="text-xs text-slate-400 font-bold tracking-widest uppercase mb-1">ID: #TWC-CH55</p>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-2 leading-tight">Executive Head Chef</h3>
+            <p class="text-brand-orange font-bold text-xs uppercase tracking-widest mb-4">Hospitality & Culinary</p>
+            <p class="text-sm text-slate-600 mb-5 font-medium leading-relaxed">Award-winning expert specializing in continental fine dining for 5-star hotels.</p>
+            
+            <div class="flex flex-wrap gap-2 mb-6 justify-center">
+              <span class="text-[10px] font-semibold bg-slate-50 border border-slate-200 px-3 py-1 rounded-full text-slate-600">Menu Design</span>
+              <span class="text-[10px] font-semibold bg-slate-50 border border-slate-200 px-3 py-1 rounded-full text-slate-600">HACCP Compliance</span>
+            </div>
+            
+            <a href="pages/contact.html" class="mt-auto block w-full text-center py-3.5 bg-brand-orange hover:bg-orange-600 text-white font-bold rounded-xl transition-colors text-sm uppercase tracking-wider shadow-md">Request Interview</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden flex flex-col group border border-slate-100">
+          <div class="h-24 bg-indigo-50 border-b border-indigo-100 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 text-6xl opacity-10 font-black">🏢</div>
+          </div>
+          
+          <div class="relative w-28 h-28 mx-auto -mt-14 z-10 shrink-0">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=400&auto=format&fit=crop" alt="Female Candidate" class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl grayscale group-hover:grayscale-0 transition-all duration-300">
+            <span class="absolute bottom-1 right-1 bg-green-500 text-white text-sm w-7 h-7 rounded-full flex items-center justify-center shadow-lg border-2 border-white" title="Verified Professional">✓</span>
+          </div>
+
+          <div class="p-6 text-center flex-grow flex flex-col">
+            <p class="text-xs text-slate-400 font-bold tracking-widest uppercase mb-1">ID: #TWC-FM30</p>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-2 leading-tight">Facility Manager</h3>
+            <p class="text-indigo-600 font-bold text-xs uppercase tracking-widest mb-4">Corporate & Facilities</p>
+            <p class="text-sm text-slate-600 mb-5 font-medium leading-relaxed">Expert in commercial building operations, maintenance scheduling, and OSH compliance.</p>
+            
+            <div class="flex flex-wrap gap-2 mb-6 justify-center">
+              <span class="text-[10px] font-semibold bg-slate-50 border border-slate-200 px-3 py-1 rounded-full text-slate-600">HVAC Systems</span>
+              <span class="text-[10px] font-semibold bg-slate-50 border border-slate-200 px-3 py-1 rounded-full text-slate-600">Team Leadership</span>
+            </div>
+            
+            <a href="pages/contact.html" class="mt-auto block w-full text-center py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition-colors text-sm uppercase tracking-wider shadow-md">Request Interview</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 px-4 max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="text-brand-blue font-bold tracking-widest uppercase text-sm mb-3">Our Reach</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-6">A Truly Global Network</h2>
+        <p class="text-lg text-slate-600 mb-8">From Sarajevo, we reach talent pools and employer networks across Europe, the Middle East, Asia, and beyond. Our consultants understand local markets while thinking globally.</p>
+        
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+          <li class="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+            <img src="https://flagcdn.com/w40/ba.png" alt="Bosnia Flag" class="w-8 h-6 object-cover rounded-sm">
+            <span class="font-medium text-slate-700">Sarajevo (HQ)</span>
+          </li>
+          <li class="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+            <img src="https://flagcdn.com/w40/ae.png" alt="UAE Flag" class="w-8 h-6 object-cover rounded-sm">
+            <span class="font-medium text-slate-700">Dubai, UAE</span>
+          </li>
+          <li class="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+            <img src="https://flagcdn.com/w40/de.png" alt="Germany Flag" class="w-8 h-6 object-cover rounded-sm">
+            <span class="font-medium text-slate-700">Berlin, Germany</span>
+          </li>
+          <li class="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+            <img src="https://flagcdn.com/w40/qa.png" alt="Qatar Flag" class="w-8 h-6 object-cover rounded-sm">
+            <span class="font-medium text-slate-700">Doha, Qatar</span>
+          </li>
+          <li class="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+            <img src="https://flagcdn.com/w40/sa.png" alt="KSA Flag" class="w-8 h-6 object-cover rounded-sm">
+            <span class="font-medium text-slate-700">Riyadh, KSA</span>
+          </li>
+          <li class="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+            <img src="https://flagcdn.com/w40/gb.png" alt="UK Flag" class="w-8 h-6 object-cover rounded-sm">
+            <span class="font-medium text-slate-700">London, UK</span>
+          </li>
+        </ul>
+        <a href="pages/global.html" class="inline-block px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl transition-colors">Explore Presence →</a>
+     </div>
+      <div class="relative bg-blue-50 rounded-3xl p-8 flex justify-center items-center h-[300px] md:h-[400px] border border-blue-100 overflow-hidden mt-8 lg:mt-0">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" alt="World Map" class="absolute w-[150%] md:w-[120%] opacity-20 select-none">
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-50 via-transparent to-transparent"></div>
+        <p class="relative z-10 font-heading text-2xl font-bold text-brand-blue text-center">Connected<br>Worldwide</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 px-4 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <p class="text-brand-orange font-bold tracking-widest uppercase text-sm mb-3">Why Us</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">The Talent World Connect Difference</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50 hover:bg-slate-800 transition-colors">
+          <div class="font-heading text-5xl font-black text-slate-700 mb-6">01</div>
+          <h3 class="font-heading text-xl font-bold mb-3">Ethical Recruitment</h3>
+          <p class="text-slate-400">Adhering to all international standards ensuring transparent and fair practices.</p>
+        </div>
+        <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50 hover:bg-slate-800 transition-colors">
+          <div class="font-heading text-5xl font-black text-slate-700 mb-6">02</div>
+          <h3 class="font-heading text-xl font-bold mb-3">Vetted Candidates</h3>
+          <p class="text-slate-400">Rigorous screening, skills verification, background checks, and assessments.</p>
+        </div>
+        <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50 hover:bg-slate-800 transition-colors">
+          <div class="font-heading text-5xl font-black text-slate-700 mb-6">03</div>
+          <h3 class="font-heading text-xl font-bold mb-3">24/7 Support</h3>
+          <p class="text-slate-400">Multilingual team providing continuous support to candidates and employers.</p>
+        </div>
+        <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50 hover:bg-slate-800 transition-colors">
+          <div class="font-heading text-5xl font-black text-slate-700 mb-6">04</div>
+          <h3 class="font-heading text-xl font-bold mb-3">Global Network</h3>
+          <p class="text-slate-400">Access diverse talent pools and international job markets seamlessly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 px-4 max-w-7xl mx-auto" id="callback">
+    <div class="bg-brand-blue rounded-[2.5rem] p-6 md:p-16 shadow-2xl overflow-hidden relative">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-900 opacity-20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+      
+      <div class="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+        <div class="text-white text-center lg:text-left">
+          <h2 class="font-heading text-3xl md:text-5xl font-bold mb-6">Ready to take the next step?</h2>
+          <p class="text-blue-100 text-lg mb-8">Whether you are looking to hire top talent or seeking your next big career move, our expert consultants are ready to assist you.</p>
+          <ul class="space-y-4 text-blue-100 hidden lg:block">
+            <li class="flex items-center gap-3">✓ Free consultation</li>
+            <li class="flex items-center gap-3">✓ Tailored recruitment strategies</li>
+            <li class="flex items-center gap-3">✓ Strict confidentiality</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl flex flex-col items-center text-center gap-6">
+          <div class="w-16 h-16 bg-orange-50 text-brand-orange rounded-full flex items-center justify-center text-3xl mb-2">
+            ✉️
+          </div>
+          <h3 class="font-heading text-2xl md:text-3xl font-bold text-slate-900">Let's Connect</h3>
+          <p class="text-slate-600">Head over to our contact page to send us a direct message or request a detailed callback.</p>
+          
+          <a href="pages/contact.html" class="w-full mt-4 bg-brand-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg shadow-orange-500/30 transition-all hover:-translate-y-1 block">
+            Go to Contact Page →
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-slate-950 pt-20 pb-10 px-4 text-slate-400 mt-auto">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-16">
+        <div class="lg:col-span-2 lg:pr-16">
+          <div class="font-heading font-bold text-xl mb-6">
+            <span class="text-brand-blue">Talent</span> <span class="text-brand-orange">World</span> <span class="text-white">Connect</span>
+          </div>
+          <p class="mb-6 leading-relaxed">Professional recruitment agency connecting global talent with world-class opportunities. Based in Sarajevo, Bosnia.</p>
+        </div>
+        
+        <div>
+          <h4 class="font-heading font-bold text-white text-lg mb-6">Pages</h4>
+          <ul class="space-y-4">
+            <li><a href="index.html" class="hover:text-brand-blue transition-colors">Home</a></li>
+            <li><a href="pages/jobs.html" class="hover:text-brand-blue transition-colors">Jobs</a></li>
+            <li><a href="contact.html" class="hover:text-brand-blue transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-heading font-bold text-white text-lg mb-6">Contact</h4>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="mt-1">📍</span>
+              <span>Semira Fraste 5<br/>71000 Sarajevo</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span>✉</span>
+              <a href="mailto:info@talentworldconnect.com" class="hover:text-brand-blue transition-colors break-all">info@talentworldconnect.com</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <span>📞</span>
+              <a href="tel:+38761616422" class="hover:text-brand-blue transition-colors">+387 61 61 64 22</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+        <p>© 2026 Talent World Connect. All rights reserved. <a href="admin/login.html" class="opacity-0 hover:opacity-100 transition-opacity">🔒</a></p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/global.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

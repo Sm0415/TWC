@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – Talent World Connect | Global Manpower</title>
+  <meta name="description" content="Learn about Talent World Connect – a Sarajevo-based global manpower agency bridging exceptional skilled labor with world-class employers across 20+ countries."/>
+  <link rel="icon" type="image/png" href="/logo-removebg.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Outfit:wght@700;900&display=swap" rel="stylesheet"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: { blue: '#2563EB', orange: '#F97316', green: '#10B981', dark: '#0F172A' },
+            navy: { 900: '#020617', 800: '#0F172A', 700: '#1E293B' },
+            accent: { blue: '#2563EB', orange: '#F97316' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .glass-dark { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+    .bg-grid { background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 30px 30px; }
+  </style>
+</head>
+<body class="font-sans text-slate-600 bg-slate-50 antialiased selection:bg-brand-blue selection:text-white flex flex-col min-h-screen">
+
+  <div class="bg-brand-dark text-slate-300 text-sm py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <span>📍 Semira Fraste 5, 71000 Sarajevo, Bosnia and Herzegovina</span>
+      <span class="flex gap-6">
+        <a href="mailto:info@talentworldconnect.com" class="hover:text-white transition-colors">✉ info@talentworldconnect.com</a>
+        <a href="tel:+38761616422" class="hover:text-white transition-colors">📞 +387 61 61 64 22</a>
+      </span>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center relative">
+      <a href="../index.html" class="flex items-center gap-3 group">
+        <div class="text-3xl transition-transform group-hover:scale-110">
+          <img src="../logo-removebg.png" alt="Logo" class="w-40 h-22 object-contain" onerror="this.src='https://via.placeholder.com/160x60?text=Logo'">
+        </div>
+        <div class="font-heading font-bold leading-tight">
+          <span class="text-brand-blue text-lg">Globally</span><span class="text-brand-orange text-lg"> Connected</span><br/>
+          <span class="text-slate-800">To World</span>
+        </div>
+      </a>
+
+      <nav id="mobileMenu" class="hidden lg:flex absolute lg:relative top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none flex-col lg:flex-row items-center gap-6 lg:gap-8 font-medium text-slate-600 p-6 lg:p-0 border-b lg:border-none border-slate-200">
+        <a href="../index.html" class="hover:text-brand-blue transition-colors">Home</a>
+        <a href="about.html" class="text-brand-blue font-semibold">About Us</a>
+        <a href="services.html" class="hover:text-brand-blue transition-colors">Services</a>
+        <a href="jobs.html" class="hover:text-brand-blue transition-colors">Job Board</a>
+        <a href="global.html" class="hover:text-brand-blue transition-colors">Global Presence</a>
+        <a href="contact.html" class="hover:text-brand-blue transition-colors">Contact</a>
+        <a href="../admin/dashboard.html" id="adminNavLink" class="hidden px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg transition-colors border border-slate-200 w-full lg:w-auto text-center">Admin ↗</a>
+      </nav>
+
+      <button id="hamburgerBtn" class="lg:hidden text-2xl text-slate-800 focus:outline-none" aria-label="Menu">☰</button>
+    </div>
+  </header>
+  <section class="relative bg-navy-900 py-20 lg:py-32 px-4 overflow-hidden text-center bg-grid border-b-4 border-accent-orange">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] md:w-[800px] h-[400px] bg-accent-blue/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto relative z-10">
+      <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full glass-dark border border-white/10 text-accent-orange font-bold text-[10px] uppercase tracking-widest mb-6">
+        <span class="flex h-2 w-2 rounded-full bg-accent-orange animate-pulse"></span>
+        Licensed Overseas Employment Promoters
+      </div>
+      <h1 class="font-heading text-4xl sm:text-5xl lg:text-7xl font-black text-white leading-[1.1] md:leading-[0.9] tracking-tighter mb-6 uppercase">
+        Powering <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-blue-400">Global</span><br/>Mega-Projects.
+      </h1>
+      <p class="text-base md:text-lg text-slate-400 max-w-2xl mx-auto font-medium leading-relaxed">
+        We bridge the gap between the world's most dynamic companies and highly-skilled, verified manpower from across the globe.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 px-4 bg-white">
+    <div class="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div>
+        <p class="text-accent-blue font-black tracking-[0.3em] uppercase text-[10px] mb-3 text-center md:text-left">Corporate Heritage</p>
+        <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 mb-6 uppercase tracking-tighter leading-tight md:leading-none text-center md:text-left">Born in Sarajevo.<br/>Deploying Worldwide.</h2>
+        <p class="text-slate-600 font-medium leading-relaxed mb-5 text-center md:text-left">
+          Founded with a vision to streamline global workforce mobility, Talent World Connect serves as the critical link between skilled professionals in the Balkans, Asia, and Eastern Europe, and large-scale enterprises in the EU and GCC regions.
+        </p>
+        <p class="text-slate-600 font-medium leading-relaxed mb-10 text-center md:text-left">
+          We are not a standard recruitment agency. We are a <strong class="text-slate-800">Manpower Supply Enterprise</strong>. From rigorous trade-skill testing and medical verifications to complex visa processing and mass deployment logistics, we handle the entire human capital supply chain.
+        </p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 border-t border-slate-100 pt-8 text-center md:text-left">
+          <div><span class="block font-heading text-3xl md:text-4xl font-black text-slate-900">5k+</span><span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Workers Deployed</span></div>
+          <div><span class="block font-heading text-3xl md:text-4xl font-black text-slate-900">20+</span><span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Destination Markets</span></div>
+          <div class="col-span-2 md:col-span-1 md:block"><span class="block font-heading text-3xl md:text-4xl font-black text-slate-900">ISO</span><span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">9001 Certified</span></div>
+        </div>
+      </div>
+
+      <div class="relative mt-8 lg:mt-0">
+        <div class="absolute inset-0 md:-inset-4 bg-gradient-to-tr from-accent-blue/20 to-brand-green/20 blur-2xl rounded-[3rem] z-0"></div>
+        <img
+          src="https://images.unsplash.com/photo-1504307651254-35680f356fce?auto=format&fit=crop&w=800&q=80"
+          alt="Skilled Manpower"
+          class="relative z-10 w-full h-[350px] md:h-[550px] object-cover rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-slate-100 grayscale-[20%]"
+        />
+        <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 md:translate-x-0 md:bottom-10 md:-left-10 z-20 bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-2xl border border-slate-50 flex items-center gap-4 w-[90%] md:w-auto">
+          <div class="w-12 h-12 md:w-14 md:h-14 bg-blue-50 text-accent-blue rounded-xl md:rounded-2xl flex items-center justify-center text-xl md:text-2xl font-black shrink-0">🌍</div>
+          <div>
+            <p class="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest">Global Capacity</p>
+            <p class="font-heading text-lg md:text-xl font-black text-slate-900 tracking-tight leading-tight">Mass Deployment Ready</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-16 md:py-24 px-4 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-[1000px] mx-auto">
+      
+      <div class="text-center mb-16">
+        <p class="text-accent-blue font-black tracking-[0.3em] uppercase text-[10px] mb-3">Corporate Compliance</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter mb-4">Official Accreditations</h2>
+        <p class="text-slate-500 font-medium text-sm md:text-base">We operate under strict international labor laws. Review our official licenses guaranteeing 100% legal and secure recruitment.</p>
+      </div>
+
+      <div class="space-y-16 md:space-y-24">
+        
+        <div class="bg-white p-6 md:p-10 rounded-[2rem] border border-slate-200 shadow-xl shadow-slate-200/50 flex flex-col items-center text-center">
+          <h3 class="font-heading text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tight mb-2">Ministry of Labour License</h3>
+          <p class="text-slate-500 font-medium mb-10 max-w-xl">Official government-issued authorization to operate as an Overseas Employment Promoter.</p>
+          
+          <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=1200&q=80" 
+               alt="Ministry of Labour License" 
+               class="w-full max-w-4xl rounded-xl shadow-md border-4 border-slate-100 object-contain">
+        </div>
+
+        <div class="bg-white p-6 md:p-10 rounded-[2rem] border border-slate-200 shadow-xl shadow-slate-200/50 flex flex-col items-center text-center">
+          <h3 class="font-heading text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tight mb-2">ISO 9001:2015 Certification</h3>
+          <p class="text-slate-500 font-medium mb-10 max-w-xl">Internationally recognized certification for our Quality Management Systems in global manpower sourcing and placement.</p>
+          
+          <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=1200&q=80" 
+               alt="ISO 9001 Certificate" 
+               class="w-full max-w-4xl rounded-xl shadow-md border-4 border-slate-100 object-contain">
+        </div>
+
+        <div class="bg-white p-6 md:p-10 rounded-[2rem] border border-slate-200 shadow-xl shadow-slate-200/50 flex flex-col items-center text-center">
+          <h3 class="font-heading text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tight mb-2">Corporate Registration</h3>
+          <p class="text-slate-500 font-medium mb-10 max-w-xl">Fully incorporated and registered manpower supply enterprise within the Chamber of Commerce.</p>
+          
+          <img src="https://images.unsplash.com/photo-1603796846097-bee99e4a601f?auto=format&fit=crop&w=1200&q=80" 
+               alt="Corporate Registration Certificate" 
+               class="w-full max-w-4xl rounded-xl shadow-md border-4 border-slate-100 object-contain">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-32 px-4 bg-navy-900 text-white relative bg-grid">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-12 md:mb-20">
+        <p class="text-accent-orange font-black tracking-[0.3em] uppercase text-[10px] mb-3">Enterprise Standards</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">Our Operational Pillars</h2>
+        <p class="text-slate-400 font-medium text-sm md:text-base">The non-negotiable principles that dictate how we source, process, and deploy human capital internationally.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="glass-dark p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] hover:border-accent-blue transition-colors group">
+          <div class="text-3xl md:text-4xl mb-6 md:mb-8 group-hover:scale-110 transition-transform origin-left">⚖️</div>
+          <h3 class="font-heading text-lg md:text-xl font-black uppercase tracking-tight mb-3">100% Legal Compliance</h3>
+          <p class="text-slate-400 text-sm font-medium leading-relaxed">Adhering strictly to Ministry of Labour guidelines, international embassy laws, and ethical recruitment practices.</p>
+        </div>
+        <div class="glass-dark p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] hover:border-brand-green transition-colors group">
+          <div class="text-3xl md:text-4xl mb-6 md:mb-8 group-hover:scale-110 transition-transform origin-left">🛡️</div>
+          <h3 class="font-heading text-lg md:text-xl font-black uppercase tracking-tight mb-3">Skill Verification</h3>
+          <p class="text-slate-400 text-sm font-medium leading-relaxed">Every candidate undergoes rigorous trade testing, background checks, and medical screenings prior to selection.</p>
+        </div>
+        <div class="glass-dark p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] hover:border-accent-orange transition-colors group">
+          <div class="text-3xl md:text-4xl mb-6 md:mb-8 group-hover:scale-110 transition-transform origin-left">⏱️</div>
+          <h3 class="font-heading text-lg md:text-xl font-black uppercase tracking-tight mb-3">Deployment Speed</h3>
+          <p class="text-slate-400 text-sm font-medium leading-relaxed">Dedicated visa processing teams ensure the fastest possible turnaround times from selection to on-site arrival.</p>
+        </div>
+        <div class="glass-dark p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] hover:border-purple-500 transition-colors group">
+          <div class="text-3xl md:text-4xl mb-6 md:mb-8 group-hover:scale-110 transition-transform origin-left">🤝</div>
+          <h3 class="font-heading text-lg md:text-xl font-black uppercase tracking-tight mb-3">Worker Welfare</h3>
+          <p class="text-slate-400 text-sm font-medium leading-relaxed">Zero-tolerance for exploitation. We ensure transparent contracts, safe transit, and guaranteed post-arrival support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 px-4 bg-slate-50">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+        <p class="text-accent-blue font-black tracking-[0.3em] uppercase text-[10px] mb-3">Our Methodology</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter mb-4">End-to-End Solutions</h2>
+        <p class="text-slate-500 font-medium text-sm md:text-base">We remove the logistical nightmare of overseas hiring so you can focus on project execution.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div class="bg-white p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-slate-200 shadow-sm flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+          <div class="w-14 h-14 md:w-16 md:h-16 bg-blue-50 text-accent-blue rounded-xl md:rounded-2xl flex items-center justify-center font-heading font-black text-xl md:text-2xl shrink-0">01</div>
+          <div>
+            <h3 class="font-heading text-xl md:text-2xl font-black text-slate-900 uppercase tracking-tight mb-2">Mass Sourcing & Sifting</h3>
+            <p class="text-slate-500 text-sm md:text-base font-medium leading-relaxed">Utilizing an extensive database across Europe and Asia to instantly identify qualified laborers, engineers, and medical staff.</p>
+          </div>
+        </div>
+        <div class="bg-white p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-slate-200 shadow-sm flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+          <div class="w-14 h-14 md:w-16 md:h-16 bg-blue-50 text-accent-blue rounded-xl md:rounded-2xl flex items-center justify-center font-heading font-black text-xl md:text-2xl shrink-0">02</div>
+          <div>
+            <h3 class="font-heading text-xl md:text-2xl font-black text-slate-900 uppercase tracking-tight mb-2">Trade Testing & Medical</h3>
+            <p class="text-slate-500 text-sm md:text-base font-medium leading-relaxed">Coordinating with certified medical centers and technical institutes to guarantee candidates meet international physical and technical standards.</p>
+          </div>
+        </div>
+        <div class="bg-white p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-slate-200 shadow-sm flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+          <div class="w-14 h-14 md:w-16 md:h-16 bg-blue-50 text-accent-blue rounded-xl md:rounded-2xl flex items-center justify-center font-heading font-black text-xl md:text-2xl shrink-0">03</div>
+          <div>
+            <h3 class="font-heading text-xl md:text-2xl font-black text-slate-900 uppercase tracking-tight mb-2">Embassy & Visa Logistics</h3>
+            <p class="text-slate-500 text-sm md:text-base font-medium leading-relaxed">Our legal teams navigate embassy bureaucracy, work permits, biometrics, and attestation, minimizing rejection rates.</p>
+          </div>
+        </div>
+        <div class="bg-white p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-slate-200 shadow-sm flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+          <div class="w-14 h-14 md:w-16 md:h-16 bg-blue-50 text-accent-blue rounded-xl md:rounded-2xl flex items-center justify-center font-heading font-black text-xl md:text-2xl shrink-0">04</div>
+          <div>
+            <h3 class="font-heading text-xl md:text-2xl font-black text-slate-900 uppercase tracking-tight mb-2">Ticketing & Deployment</h3>
+            <p class="text-slate-500 text-sm md:text-base font-medium leading-relaxed">Managing flight itineraries, pre-departure orientations, and airport assistance to ensure your workforce arrives on site, on time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 px-4 max-w-[1400px] mx-auto">
+    <div class="bg-accent-blue rounded-[2rem] md:rounded-[3rem] p-6 md:p-20 shadow-2xl overflow-hidden relative">
+      <div class="absolute inset-0 bg-grid opacity-20"></div>
+      <div class="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-white opacity-10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+
+      <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center relative z-10 text-center lg:text-left">
+        <div class="text-white">
+          <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl font-black mb-4 md:mb-6 uppercase tracking-tighter leading-tight">Need 100+ Workers for a Project?</h2>
+          <p class="text-blue-100 text-base md:text-lg mb-6 md:mb-8 font-medium">Partner with a certified manpower supplier. Tell us your requirements, and our corporate team will draft a custom deployment strategy within 24 hours.</p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 lg:justify-end">
+          <a href="contact.html" class="px-6 py-4 md:px-10 md:py-5 bg-white hover:bg-slate-50 text-navy-900 font-black rounded-xl md:rounded-2xl text-center shadow-xl hover:-translate-y-1 transition-all uppercase tracking-widest text-xs">
+            Request Corporate Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-slate-950 pt-20 pb-10 px-4 text-slate-400 mt-auto">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-16">
+        <div class="lg:col-span-2 lg:pr-16">
+          <div class="font-heading font-bold text-xl mb-6">
+            <span class="text-brand-blue">Talent</span> <span class="text-brand-orange">World</span> <span class="text-white">Connect</span>
+          </div>
+          <p class="mb-6 leading-relaxed">Professional recruitment agency connecting global talent with world-class opportunities. Based in Sarajevo, Bosnia.</p>
+        </div>
+        
+        <div>
+          <h4 class="font-heading font-bold text-white text-lg mb-6">Pages</h4>
+          <ul class="space-y-4">
+            <li><a href="../index.html" class="hover:text-brand-blue transition-colors">Home</a></li>
+            <li><a href="jobs.html" class="hover:text-brand-blue transition-colors">Jobs</a></li>
+            <li><a href="contact.html" class="hover:text-brand-blue transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-heading font-bold text-white text-lg mb-6">Contact</h4>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="mt-1">📍</span>
+              <span>Semira Fraste 5<br/>71000 Sarajevo</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span>✉</span>
+              <a href="mailto:info@talentworldconnect.com" class="hover:text-brand-blue transition-colors break-all">info@talentworldconnect.com</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <span>📞</span>
+              <a href="tel:+38761616422" class="hover:text-brand-blue transition-colors">+387 61 61 64 22</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+        <p>© 2026 Talent World Connect. All rights reserved. <a href="../admin/login.html" class="opacity-0 hover:opacity-100 transition-opacity">🔒</a></p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/global.js"></script>
+  <script>
+    const btn = document.getElementById('hamburgerBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+    });
+  </script>
+
+</body>
+</html>

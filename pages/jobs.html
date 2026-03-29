@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Board – Talent World Connect</title>
+  <link rel="icon" type="image/png" href="/logo-removebg.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            brand: { blue: '#2563EB', orange: '#F97316', green: '#10B981', dark: '#0F172A' },
+            navy: { 900: '#020617', 800: '#0F172A', 700: '#1E293B' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    #applyModal { opacity: 0; pointer-events: none; transition: opacity .3s ease; }
+    #applyModal.open { opacity: 1; pointer-events: all; }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    .drag-over { border-color: #2563EB !important; background-color: #EFF6FF !important; }
+  </style>
+</head>
+
+<body class="font-sans text-slate-600 bg-slate-50 antialiased selection:bg-brand-blue selection:text-white flex flex-col min-h-screen">
+
+  <div class="bg-brand-dark text-slate-300 text-sm py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <span class="flex items-center gap-2">📍 Semira Fraste 5, 71000 Sarajevo, Bosnia and Herzegovina</span>
+      <span class="flex gap-6">
+        <a href="mailto:info@talentworldconnect.com" class="hover:text-white transition-colors">✉ info@talentworldconnect.com</a>
+        <a href="tel:+38761616422" class="hover:text-white transition-colors">📞 +387 61 61 64 22</a>
+      </span>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center relative">
+      <a href="../index.html" class="flex items-center gap-3 group">
+        <div class="text-3xl transition-transform group-hover:scale-110">
+          <img src="../logo-removebg.png" alt="Logo" class="w-40 h-22 object-contain" onerror="this.src='https://via.placeholder.com/160x60?text=Logo'">
+        </div>
+        <div class="font-heading font-bold leading-tight">
+          <span class="text-brand-blue text-lg">Globally</span><span class="text-brand-orange text-lg"> Connected</span><br/>
+          <span class="text-slate-800">To World</span>
+        </div>
+      </a>
+
+      <nav id="mobileMenu" class="hidden lg:flex absolute lg:relative top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none flex-col lg:flex-row items-center gap-6 lg:gap-8 font-medium text-slate-600 p-6 lg:p-0 border-b lg:border-none border-slate-200">
+        <a href="../index.html" class="hover:text-brand-blue transition-colors">Home</a>
+        <a href="about.html" class="hover:text-brand-blue transition-colors">About Us</a>
+        <a href="services.html" class="hover:text-brand-blue transition-colors">Services</a>
+        <a href="jobs.html" class="text-brand-blue font-semibold">Job Board</a>
+        <a href="global.html" class="hover:text-brand-blue transition-colors">Global Presence</a>
+        <a href="contact.html" class="hover:text-brand-blue transition-colors">Contact</a>
+        <a href="../admin/dashboard.html" id="adminNavLink" class="hidden px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg transition-colors border border-slate-200 w-full lg:w-auto text-center">Admin ↗</a>
+      </nav>
+
+      <button id="hamburgerBtn" class="lg:hidden text-2xl text-slate-800 focus:outline-none" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <section class="bg-navy-900 py-16 md:py-24 px-4 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
+    <div class="max-w-5xl mx-auto relative z-10 text-center">
+      <span class="inline-block py-1 px-3 rounded-full bg-brand-orange/20 text-brand-orange font-bold text-xs tracking-widest uppercase mb-4 border border-brand-orange/30">Overseas Deployment Portal</span>
+      <h1 class="font-heading text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-tighter">Find Your Global <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-blue-400">Opportunity</span></h1>
+      
+      <div class="bg-white p-3 md:p-4 rounded-2xl shadow-2xl flex flex-col md:flex-row gap-3">
+        <div class="flex-1 flex items-center bg-slate-50 border border-slate-200 rounded-xl px-4 py-3">
+          <span class="text-slate-400 mr-3 text-xl">🔍</span>
+          <input type="text" id="searchInput" onkeyup="filterJobs()" placeholder="Job Title, Keyword, or Trade..." class="w-full bg-transparent border-none outline-none text-slate-800 font-medium placeholder:text-slate-400 text-base">
+        </div>
+        <div class="flex-1 flex items-center bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 border-t md:border-t-0 md:border-l border-slate-200">
+          <span class="text-slate-400 mr-3 text-xl">📍</span>
+          <select id="locationFilter" onchange="filterJobs()" class="w-full bg-transparent border-none outline-none text-slate-800 font-medium appearance-none text-base">
+            <option value="">All Destinations</option>
+            <option value="uae">UAE (Dubai/Abu Dhabi)</option>
+            <option value="ksa">Saudi Arabia (KSA)</option>
+            <option value="qatar">Qatar</option>
+            <option value="eu">Europe (Schengen)</option>
+            <option value="uk">United Kingdom</option>
+          </select>
+        </div>
+        <button onclick="filterJobs()" class="bg-brand-blue hover:bg-blue-700 text-white px-8 py-3 md:py-0 rounded-xl font-bold uppercase tracking-widest text-sm transition-colors shadow-md shrink-0">Search</button>
+      </div>
+      
+      <div class="flex flex-wrap justify-center gap-3 mt-6 text-sm">
+        <span class="text-slate-400 font-medium">Trending:</span>
+        <button onclick="quickSearch('Nurse')" class="text-blue-300 hover:text-white transition-colors">Nurses</button>
+        <button onclick="quickSearch('Welder')" class="text-blue-300 hover:text-white transition-colors">Welders</button>
+        <button onclick="quickSearch('Engineer')" class="text-blue-300 hover:text-white transition-colors">Engineers</button>
+        <button onclick="quickSearch('Chef')" class="text-blue-300 hover:text-white transition-colors">Chefs</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="flex-grow py-12 px-4 bg-slate-50">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">
+
+      <aside class="w-full lg:w-80 shrink-0">
+        <div class="bg-white rounded-[2rem] p-6 md:p-8 border border-slate-200 shadow-sm sticky top-28">
+          <div class="flex items-center justify-between mb-6 border-b border-slate-100 pb-4">
+            <h3 class="font-heading text-lg font-black text-slate-900 uppercase tracking-tight">Filter Results</h3>
+            <button onclick="clearFilters()" class="text-xs font-bold text-brand-blue hover:underline">Clear All</button>
+          </div>
+
+          <div class="space-y-6">
+            <div>
+              <h4 class="text-xs font-bold tracking-widest uppercase text-slate-400 mb-4">Industry Sector</h4>
+              <div class="space-y-3" id="sectorFilters">
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="radio" name="sector" value="" checked onchange="filterJobs()" class="w-4 h-4 text-brand-blue border-slate-300 focus:ring-brand-blue">
+                  <span class="text-sm font-medium text-slate-700 group-hover:text-brand-blue">All Sectors</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="radio" name="sector" value="construction" onchange="filterJobs()" class="w-4 h-4 text-brand-blue border-slate-300 focus:ring-brand-blue">
+                  <span class="text-sm font-medium text-slate-700 group-hover:text-brand-blue">Construction & Civil</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="radio" name="sector" value="healthcare" onchange="filterJobs()" class="w-4 h-4 text-brand-blue border-slate-300 focus:ring-brand-blue">
+                  <span class="text-sm font-medium text-slate-700 group-hover:text-brand-blue">Medical & Healthcare</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="radio" name="sector" value="hospitality" onchange="filterJobs()" class="w-4 h-4 text-brand-blue border-slate-300 focus:ring-brand-blue">
+                  <span class="text-sm font-medium text-slate-700 group-hover:text-brand-blue">Hospitality & Catering</span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="text-xs font-bold tracking-widest uppercase text-slate-400 mb-4">Contract Type</h4>
+              <div class="space-y-3">
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" value="long-term" checked onchange="filterJobs()" class="type-filter w-4 h-4 text-brand-blue rounded border-slate-300 focus:ring-brand-blue">
+                  <span class="text-sm font-medium text-slate-700 group-hover:text-brand-blue">Long-Term (2+ Years)</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" value="short-term" checked onchange="filterJobs()" class="type-filter w-4 h-4 text-brand-blue rounded border-slate-300 focus:ring-brand-blue">
+                  <span class="text-sm font-medium text-slate-700 group-hover:text-brand-blue">Short-Term / Shutdown</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-8 bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center">
+            <div class="text-3xl mb-2">🛡️</div>
+            <h4 class="font-bold text-brand-blue text-sm uppercase tracking-wider mb-1">100% Free Recruitment</h4>
+            <p class="text-xs text-slate-500 font-medium">Beware of fake agents. TWC never charges candidates for verified corporate placements.</p>
+          </div>
+        </div>
+      </aside>
+
+      <div class="flex-1">
+        <div class="flex justify-between items-center mb-6">
+          <p class="font-black text-slate-900 text-xl"><span id="jobCount">0</span> <span class="text-slate-400 font-medium text-base ml-2">Open Positions</span></p>
+          
+          <select id="sortFilter" onchange="filterJobs()" class="bg-white border border-slate-200 text-slate-700 text-sm font-bold rounded-lg px-4 py-2 outline-none focus:border-brand-blue shadow-sm appearance-none">
+            <option value="newest">Sort: Newest First</option>
+            <option value="urgent">Sort: Urgently Hiring</option>
+          </select>
+        </div>
+
+        <div id="jobListings" class="space-y-8">
+          <div class="bg-white p-6 rounded-3xl border border-slate-200 animate-pulse h-64"></div>
+          <div class="bg-white p-6 rounded-3xl border border-slate-200 animate-pulse h-64"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+<div id="applyModal" class="fixed inset-0 bg-slate-900/80 z-[100] flex items-center justify-center p-4 backdrop-blur-sm overflow-y-auto">
+  <div class="bg-white rounded-[2rem] w-full max-w-3xl shadow-2xl relative my-8 flex flex-col">
+    
+    <div class="px-6 md:px-10 py-6 border-b border-slate-100 bg-slate-50 rounded-t-[2rem] flex justify-between items-center sticky top-0 z-10">
+      <div>
+        <p class="text-brand-blue font-bold tracking-widest uppercase text-[10px] mb-1">Official Application Form</p>
+        <h3 id="modalJobTitleText" class="font-heading text-xl md:text-2xl font-black text-slate-900 uppercase">Job Title</h3>
+      </div>
+      <button onclick="closeApplyModal()" class="w-10 h-10 bg-white border border-slate-200 hover:bg-red-50 hover:text-red-600 hover:border-red-200 text-slate-500 rounded-full flex items-center justify-center text-2xl transition-all font-black shrink-0">&times;</button>
+    </div>
+
+    <div class="p-6 md:p-10">
+      <form id="applyForm" onsubmit="submitApplication(event)" class="space-y-8">
+        <input type="hidden" id="applyJobTitle" name="jobTitle"/>
+
+        <div class="space-y-5">
+          <h4 class="text-sm font-bold text-brand-blue uppercase tracking-widest border-b border-slate-200 pb-2">1. Personal Information</h4>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">Full Name (As per Passport) <span class="text-red-500">*</span></label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400">👤</span>
+                <input type="text" name="fullName" required placeholder="e.g. John Doe" class="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all text-sm font-medium text-slate-800"/>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">Email Address <span class="text-red-500">*</span></label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400">✉️</span>
+                <input type="email" name="email" required placeholder="e.g. john@example.com" class="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all text-sm font-medium text-slate-800"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">Contact Number <span class="text-red-500">*</span></label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400">📞</span>
+                <input type="tel" name="phone" required placeholder="+CountryCode Number" class="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all text-sm font-medium text-slate-800"/>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">Nationality <span class="text-red-500">*</span></label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400">🌍</span>
+                <input type="text" name="nationality" required placeholder="e.g. Indian, Bosnian" class="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all text-sm font-medium text-slate-800"/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-5">
+          <h4 class="text-sm font-bold text-brand-blue uppercase tracking-widest border-b border-slate-200 pb-2">2. Professional Profile</h4>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">Years of Experience <span class="text-red-500">*</span></label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400">💼</span>
+                <select name="experience" required class="w-full pl-11 pr-10 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all text-sm font-medium text-slate-800 appearance-none">
+                  <option value="" disabled selected>Select Experience</option>
+                  <option>Freshers</option>
+                  <option>Less than 2 Years</option>
+                  <option>2 - 5 Years</option>
+                  <option>5 - 10 Years</option>
+                  <option>10+ Years (Gulf/Overseas Exp)</option>
+                </select>
+                <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-slate-400 pointer-events-none">▼</span>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">Passport Status <span class="text-red-500">*</span></label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400">🛂</span>
+                <select name="passport" required class="w-full pl-11 pr-10 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all text-sm font-medium text-slate-800 appearance-none">
+                  <option value="" disabled selected>Select Status</option>
+                  <option>Valid (Ready to Travel)</option>
+                  <option>Applied / In Process</option>
+                  <option>No Passport</option>
+                </select>
+                <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-slate-400 pointer-events-none">▼</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="text-sm font-bold text-brand-blue uppercase tracking-widest border-b border-slate-200 pb-2">3. Resume / CV</h4>
+        
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-2">Link to your CV (Google Drive, Dropbox, etc.) <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400">🔗</span>
+              <input type="url" name="resumeLink" required placeholder="https://..." class="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all text-sm font-medium text-slate-800"/>
+            </div>
+            <p class="text-[10px] font-bold text-slate-400 mt-2">⚠️ Ensure the link permissions are set to "Anyone with the link can view".</p>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-100">
+          <button type="submit" id="submitBtn" class="w-full bg-brand-blue hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-1 text-sm uppercase tracking-widest flex justify-center items-center gap-2">
+            Submit Application <span>→</span>
+          </button>
+          <p class="text-center text-xs text-slate-400 font-medium mt-4 flex items-center justify-center gap-1"><span>🔒</span> Your data is securely transmitted directly to our HR portal.</p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+  
+    </div>
+  </div>
+
+  <footer class="bg-slate-950 pt-20 pb-10 px-4 text-slate-400 mt-auto">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-16">
+        <div class="lg:col-span-2 lg:pr-16">
+          <div class="font-heading font-bold text-xl mb-6">
+            <span class="text-brand-blue">Talent</span> <span class="text-brand-orange">World</span> <span class="text-white">Connect</span>
+          </div>
+          <p class="mb-6 leading-relaxed">Professional recruitment agency connecting global talent with world-class opportunities. Based in Sarajevo, Bosnia.</p>
+        </div>
+        
+        <div>
+          <h4 class="font-heading font-bold text-white text-lg mb-6">Pages</h4>
+          <ul class="space-y-4">
+            <li><a href="../index.html" class="hover:text-brand-blue transition-colors">Home</a></li>
+            <li><a href="jobs.html" class="hover:text-brand-blue transition-colors">Jobs</a></li>
+            <li><a href="contact.html" class="hover:text-brand-blue transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-heading font-bold text-white text-lg mb-6">Contact</h4>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="mt-1">📍</span>
+              <span>Semira Fraste 5<br/>71000 Sarajevo</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span>✉</span>
+              <a href="mailto:info@talentworldconnect.com" class="hover:text-brand-blue transition-colors break-all">info@talentworldconnect.com</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <span>📞</span>
+              <a href="tel:+38761616422" class="hover:text-brand-blue transition-colors">+387 61 61 64 22</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+        <p>© 2026 Talent World Connect. All rights reserved. <a href="../admin/login.html" class="opacity-0 hover:opacity-100 transition-opacity">🔒</a></p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/global.js"></script>
+  <script src="../js/jobs.js"></script>
+</body>
+</html>
