@@ -439,7 +439,20 @@
       </div>
     </div>
   </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
 
+      hamburgerBtn.addEventListener('click', () => {
+        // This toggles the menu visibility on mobile
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+      });
+    });
+  </script>
+</body>
+</html>
   <script src="js/global.js"></script>
   <script src="js/home.js"></script>
 </body>
