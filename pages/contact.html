@@ -287,5 +287,19 @@
       }
     }
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      hamburgerBtn.addEventListener('click', () => {
+        // This toggles the menu visibility on mobile
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+      });
+    });
+  </script>
+</body>
+</html>
 </body>
 </html>
